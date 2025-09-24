@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Get Key</title>
+</head>
+<body>
+  <h2>Get a 24h Key</h2>
+  <button id="btnGet">Get Key</button>
+  <button id="btnCopy">Copy</button>
+  <pre id="result">—</pre>
+  <script src="/js/generate.js"></script>
+  <script>
+    const resEl = document.getElementById('result');
+    document.getElementById('btnGet').onclick = async () => {
+      const r = await getKeyForDevice();
+      resEl.textContent = JSON.stringify(r, null, 2);
+    };
+    document.getElementById('btnCopy').onclick = async () => {
+      const txt = resEl.textContent;
+      if (txt) await navigator.clipboard.writeText(txt);
+    };
+  </script>
+</body>
+</html>
