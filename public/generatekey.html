@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Generate Key</title>
+</head>
+<body>
+  <h2>Manual Key Generation</h2>
+  <button id="btnGen">Generate Key</button>
+  <button id="btnCopy">Copy</button>
+  <pre id="result">—</pre>
+  <script src="/js/generate.js"></script>
+  <script>
+    const resEl = document.getElementById('result');
+    document.getElementById('btnGen').onclick = async () => {
+      const r = await generateKey();
+      resEl.textContent = JSON.stringify(r, null, 2);
+    };
+    document.getElementById('btnCopy').onclick = async () => {
+      await navigator.clipboard.writeText(resEl.textContent);
+    };
+  </script>
+</body>
+</html><!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Generate Key</title>
+</head>
+<body>
+  <h2>Manual Key Generation</h2>
+  <button id="btnGen">Generate Key</button>
+  <button id="btnCopy">Copy</button>
+  <pre id="result">—</pre>
+  <script src="/js/generate.js"></script>
+  <script>
+    const resEl = document.getElementById('result');
+    document.getElementById('btnGen').onclick = async () => {
+      const r = await generateKey();
+      resEl.textContent = JSON.stringify(r, null, 2);
+    };
+    document.getElementById('btnCopy').onclick = async () => {
+      await navigator.clipboard.writeText(resEl.textContent);
+    };
+  </script>
+</body>
+</html>
