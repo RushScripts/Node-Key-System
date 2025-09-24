@@ -196,4 +196,4 @@ MIT License – free to use, modify, and distribute.
 ---
 
 ## 👤 Credits
-Made by **RushDoesProgramming**
+Made by **RushDoesProgramming (RushScripts)**
